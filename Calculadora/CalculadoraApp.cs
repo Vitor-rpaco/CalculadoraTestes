@@ -27,16 +27,11 @@ namespace Calculadora
 
         public double Divisao(double a, double b)
         {
-            try { 
-                return (a / b);
-            }
-            catch(Exception ex)
+            if(b == 0)
             {
-                Console.WriteLine("Erro de divisão: {ex}");
-                throw new System.ArithmeticException();
+                throw new ArithmeticException();
             }
-
-            return 0;
+            return (a / b);
         }
     }
 }
